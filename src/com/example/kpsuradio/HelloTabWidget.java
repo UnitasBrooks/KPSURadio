@@ -1,16 +1,13 @@
 package com.example.kpsuradio;
 
-import android.R.color;
-import android.os.Bundle;
-import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
-import android.widget.TabWidget;
 import org.kpsu.kpsuradio.R;
 
 @SuppressWarnings({ "deprecation", "unused" })
