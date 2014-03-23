@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.kpsu.kpsuradio"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	
+    
+	<!-- Allow's application to access the web -->
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+         android:screenOrientation="portrait"
+       >
+		
+        <!-- web stream activity declaration, this is also the launcher activity -->
+        <activity
+            android:name="com.example.kpsuradio.WebStream"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- about activity declaration -->
+        <activity
+            android:name="com.example.kpsuradio.PodList"
+            android:label="@string/title_activity_about" >
+        </activity>
+
+        <!-- web site activity declaration -->
+        <activity
+            android:name="com.example.kpsuradio.Website"
+            android:label="@string/title_activity_website" >
+        </activity>
+       <activity android:name="com.example.kpsuradio.HelloTabWidget" android:label="@string/app_name"
+         android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+   
+    </application>
+	
+</manifest>

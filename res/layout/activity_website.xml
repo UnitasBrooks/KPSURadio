@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Website" >
+	 
+	 <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/largebck2" />
+
+    <ImageButton
+        android:id="@+id/homepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="54dp"
+        android:background="@drawable/home"
+        android:contentDescription="@drawable/home"
+        android:onClick="webSite" />
+
+    <ImageButton
+        android:id="@+id/twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/homepage"
+        android:background="@drawable/twitter"
+        android:contentDescription="@drawable/twitter"
+        android:onClick="twitter" />
+    
+    <ImageButton
+        android:id="@+id/donate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/homepage"
+        android:layout_marginTop="129dp"
+        android:background="@drawable/donate"
+        android:contentDescription="@drawable/donate"
+        android:onClick="donate" />
+
+    <ImageButton
+        android:id="@+id/facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/donate"
+        android:background="@drawable/facebook"
+        android:contentDescription="@drawable/facebook"
+        android:onClick="facebook" />
+
+  
+
+</RelativeLayout>
