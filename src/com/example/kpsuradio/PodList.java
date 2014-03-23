@@ -112,7 +112,7 @@ public class PodList extends Activity implements SeekBar.OnSeekBarChangeListener
 		}
 
 		// Check if playing or not
-		if(currentlyPlaying.playingFlag == true || currentlyPlaying.mp != null )
+		if(currentlyPlaying.playingFlag || currentlyPlaying.mp != null )
 		{
 			stop();
 		}
@@ -127,7 +127,7 @@ public class PodList extends Activity implements SeekBar.OnSeekBarChangeListener
 	public void imageButtonController(View view)
 	{
 		
-		if(currentlyPlaying.mp != null && currentlyPlaying.playingFlag == true)
+		if(currentlyPlaying.mp != null && currentlyPlaying.playingFlag)
 		{
 			if(currentlyPlaying.mp.isPlaying())
 			{
@@ -140,7 +140,6 @@ public class PodList extends Activity implements SeekBar.OnSeekBarChangeListener
 				stop();
 			}
 			// change image
-			//playPause.setBackground(playImage);
 			playPause.setBackgroundDrawable(playImage);
 		}
 		else
@@ -282,18 +281,6 @@ public class PodList extends Activity implements SeekBar.OnSeekBarChangeListener
 		 buttonArray[17].button = (Button) findViewById(R.id.button18);
 		 buttonArray[18].button = (Button) findViewById(R.id.button19);
 		 buttonArray[19].button = (Button) findViewById(R.id.button20);
-		
-		 /*
-		 buttonArray[0].button = button;
-		 buttonArray[1].button = button2;
-		 buttonArray[2].button = button3;
-		 buttonArray[3].button = button4;
-		 buttonArray[4].button = button5;
-		 buttonArray[5].button = button6;
-		 buttonArray[6].button = button7;
-		 buttonArray[7].button = button8;
-		 buttonArray[8].button = button9;
-		 buttonArray[9].button = button10; */
 	}
 
 	public void updateProgressBar()
