@@ -1,22 +1,19 @@
 package com.example.kpsuradio;
-import java.io.IOException;
-import org.kpsu.kpsuradio.R;
-
 import android.annotation.SuppressLint;
-//import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.media.AudioManager.OnAudioFocusChangeListener;
+import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.SeekBar;
-import android.widget.TextView;
-import android.widget.ProgressBar;
+import android.widget.*;
+import org.kpsu.kpsuradio.R;
+
+import java.io.IOException;
+
+//import android.app.Activity;
 @SuppressWarnings("deprecation")
 public class PodcastPackage implements OnPreparedListener, OnAudioFocusChangeListener{
 	
@@ -128,7 +125,7 @@ public class PodcastPackage implements OnPreparedListener, OnAudioFocusChangeLis
 	    switch (focusChange) {
 	        case AudioManager.AUDIOFOCUS_GAIN:
 	            // resume play back
-	            if (mp != null  && !mp.isPlaying() && playingFlag != false)
+	            if (mp != null  && !mp.isPlaying() && playingFlag)
 	            {
 	            	playingFlag = true;
 	            	mp.start();
